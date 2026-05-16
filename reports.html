@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Reports</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/reports.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- CHART JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h1>CSC CRM</h1>
+
+        <ul>
+
+            <li onclick="window.location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+
+            </li>
+
+            <li onclick="window.location.href='student-attendance.html'">
+
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Attendance
+
+            </li>
+
+            <li onclick="window.location.href='staff-attendance.html'">
+
+                <i class="fa-solid fa-users"></i>
+                Staff Attendance
+
+            </li>
+
+            <li class="active">
+
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+
+            </li>
+
+            <li onclick="window.location.href='search-filter.html'">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search & Filter
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <h2>Attendance Reports</h2>
+
+            <div class="top-buttons">
+
+                <button>
+                    Export Excel
+                </button>
+
+                <button>
+                    Download PDF
+                </button>
+
+                <button>
+                    Print
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- REPORT CONTENT -->
+
+        <div class="report-section">
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="report-cards">
+
+                <div class="report-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <h2>245</h2>
+
+                    <p>Total Reports</p>
+
+                </div>
+
+                <div class="report-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h2>92%</h2>
+
+                    <p>Average Attendance</p>
+
+                </div>
+
+                <div class="report-card">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <h2>18</h2>
+
+                    <p>Low Attendance</p>
+
+                </div>
+
+                <div class="report-card">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <h2>12</h2>
+
+                    <p>Generated Today</p>
+
+                </div>
+
+            </div>
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <input type="date">
+
+                <input type="date">
+
+                <select>
+
+                    <option>Select Department</option>
+                    <option>Python Full Stack</option>
+                    <option>UI UX Design</option>
+                    <option>Data Science</option>
+
+                </select>
+
+                <select>
+
+                    <option>Select Batch</option>
+                    <option>Batch A</option>
+                    <option>Batch B</option>
+
+                </select>
+
+                <input type="text" placeholder="Search Student">
+
+                <button>
+                    Generate Report
+                </button>
+
+            </div>
+
+            <!-- REPORT TYPES -->
+
+            <div class="report-types">
+
+                <button class="active-report">
+                    Daily Report
+                </button>
+
+                <button>
+                    Monthly Report
+                </button>
+
+                <button>
+                    Student Report
+                </button>
+
+                <button>
+                    Staff Report
+                </button>
+
+                <button>
+                    Analytics
+                </button>
+
+            </div>
+
+            <!-- CHART + ALERT -->
+
+            <div class="chart-section">
+
+                <!-- CHART -->
+
+                <div class="chart-card">
+
+                    <div class="section-title">
+
+                        <h3>Attendance Analytics</h3>
+
+                    </div>
+
+                    <canvas id="reportChart"></canvas>
+
+                </div>
+
+                <!-- ALERTS -->
+
+                <div class="alert-card">
+
+                    <div class="section-title">
+
+                        <h3>Low Attendance Alerts</h3>
+
+                    </div>
+
+                    <div class="alert-item">
+
+                        ⚠ Ruturaj Gaiwad - 65%
+                    </div>
+
+                    <div class="alert-item">
+
+                        ⚠ Urvil Patel - 58%
+
+                    </div>
+
+                    <div class="alert-item">
+
+                        ⚠ Sanju Samson - 60%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+
+            <div class="table-section">
+
+                <div class="section-title">
+
+                    <h3>Attendance Report Records</h3>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Photo</th>
+                            <th>Student Name</th>
+                            <th>Course</th>
+                            <th>Batch</th>
+                            <th>Attendance %</th>
+                            <th>Present Days</th>
+                            <th>Absent Days</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+
+                                <img src="https://i.pravatar.cc/45?img=12" class="student-img">
+
+                            </td>
+
+                            <td>MS Dhoni</td>
+
+                            <td>Python Full Stack</td>
+
+                            <td>A</td>
+
+                            <td>92%</td>
+
+                            <td>24</td>
+
+                            <td>03</td>
+
+                            <td>
+
+                                <span class="good">
+                                    Good
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+                                    <button class="download-btn">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <img src="https://i.pravatar.cc/45?img=22" class="student-img">
+
+                            </td>
+
+                            <td>Ruturaj Gaiwad</td>
+
+                            <td>UI UX Design</td>
+
+                            <td>B</td>
+
+                            <td>65%</td>
+
+                            <td>18</td>
+
+                            <td>10</td>
+
+                            <td>
+
+                                <span class="low">
+                                    Low
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+
+                                        <i class="fa-solid fa-eye"></i>
+
+                                    </button>
+
+                                    <button class="download-btn">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CHART JS -->
+
+    <script>
+
+        const ctx = document.getElementById('reportChart');
+
+        new Chart(ctx, {
+
+            type:'bar',
+
+            data:{
+
+                labels:['Python','UI UX','Data Science','Testing'],
+
+                datasets:[{
+
+                    label:'Attendance %',
+
+                    data:[92,65,88,95],
+
+                    backgroundColor:[
+                        '#2563eb',
+                        '#16a34a',
+                        '#f59e0b',
+                        '#dc2626'
+                    ]
+
+                }]
+
+            },
+
+            options:{
+                responsive:true
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

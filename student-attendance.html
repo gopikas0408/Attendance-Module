@@ -1,0 +1,356 @@
+<!-- IMPROVED PROFESSIONAL STUDENT ATTENDANCE -->
+<!-- student-attendance.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Attendance</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/student-attendance.css">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h1>CSC CRM</h1>
+
+        <ul>
+
+            <li onclick="window.location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Attendance
+            </li>
+
+            <li onclick="window.location.href='staff-attendance.html'">
+                <i class="fa-solid fa-users"></i>
+                Staff Attendance
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li onclick="window.location.href='search-filter.html'">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search & Filter
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <h1>Student Attendance</h1>
+
+            <div class="top-buttons">
+
+                <button class="mark-btn">
+                    Mark All Present
+                </button>
+
+                <button class="save-btn">
+                    Save Attendance
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <!-- SUMMARY CARDS -->
+
+            <div class="summary-cards">
+
+                <div class="card">
+
+                    <div class="card-icon blue">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h4>Total Students</h4>
+                        <h2>120</h2>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <h4>Present</h4>
+                        <h2>108</h2>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon red">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div>
+                        <h4>Absent</h4>
+                        <h2>08</h2>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-icon yellow">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <h4>Late</h4>
+                        <h2>04</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FILTERS -->
+
+            <div class="filter-section">
+
+                <select>
+                    <option>Select Course</option>
+                </select>
+
+                <select>
+                    <option>Select Batch</option>
+                </select>
+
+                <select>
+                    <option>Attendance Status</option>
+                </select>
+
+                <input type="date">
+
+                <input type="text" placeholder="Search Student">
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+            <!-- CLASS INFO -->
+
+            <div class="class-info">
+
+                <div>
+                    <h4>Course</h4>
+                    <p>Python Full Stack</p>
+                </div>
+
+                <div>
+                    <h4>Batch</h4>
+                    <p>Batch A</p>
+                </div>
+
+                <div>
+                    <h4>Faculty</h4>
+                    <p>Akash</p>
+                </div>
+
+                <div>
+                    <h4>Date</h4>
+                    <p>14 May 2026</p>
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+
+            <div class="table-section">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Photo</th>
+                            <th>Student Name</th>
+                            <th>Roll No</th>
+                            <th>Attendance %</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <img src="./bbbbbb.webp" class="student-img">
+                            </td>
+
+                            <td>MS Dhoni</td>
+
+                            <td>STU001</td>
+
+                            <td>
+                                <span class="good-attendance">
+                                    92%
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <select class="status-select">
+
+                                    <option>Present</option>
+                                    <option>Absent</option>
+                                    <option>Late</option>
+
+                                </select>
+
+                            </td>
+
+                            <td>
+                                <input type="text" placeholder="Remarks">
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <img src="./bbbbbb.webp" class="student-img">
+                            </td>
+
+                            <td>Ruturaj Gaikwad</td>
+
+                            <td>STU002</td>
+
+                            <td>
+                                <span class="low-attendance">
+                                    65%
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <select class="status-select">
+
+                                    <option>Absent</option>
+                                    <option>Present</option>
+                                    <option>Late</option>
+
+                                </select>
+
+                            </td>
+
+                            <td>
+                                <input type="text" placeholder="Medical Leave">
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <button>← Prev</button>
+
+                <div class="pages">
+
+                    <span class="active-page">1</span>
+                    <span>2</span>
+                    <span>3</span>
+
+                </div>
+
+                <button>Next →</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

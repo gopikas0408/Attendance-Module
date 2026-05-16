@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Staff Attendance</title>
+
+    <link rel="stylesheet" href="css/staff-attendance.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h1>CSC CRM</h1>
+
+        <ul>
+
+            <li onclick="window.location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="window.location.href='student-attendance.html'">
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Attendance
+            </li>
+
+            <li onclick="window.location.href='staff-attendance.html'">
+                <i class="fa-solid fa-users"></i>
+                Staff Attendance
+            </li>
+
+            <li onclick="window.location.href='reports.html'">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li onclick="window.location.href='search-filter.html'">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search & Filter
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <h2>Staff Attendance</h2>
+
+            <div class="top-buttons">
+
+                <button class="checkin-btn">
+                    Check-In
+                </button>
+
+                <button class="checkout-btn">
+                    Check-Out
+                </button>
+
+            </div>
+
+        </div>
+        <!-- FILTER SECTION -->
+
+        <div class="filter-section">
+
+            <select>
+                <option>Select Department</option>
+                <option>Testing</option>
+                <option>Development</option>
+                <option>HR</option>
+            </select>
+
+            <select>
+                <option>Select Shift</option>
+                <option>Morning Shift</option>
+                <option>Evening Shift</option>
+            </select>
+
+            <input type="date">
+
+            <input type="text" placeholder="Search Staff">
+
+            <button>
+                Search
+            </button>
+
+        </div>
+
+        <!-- STAFF SECTION -->
+
+        <div class="staff-section">
+
+            <!-- STAFF CARDS -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                    <h3>Present Staff</h3>
+
+                    <h1>35</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-user-clock"></i>
+
+                    <h3>Late Entry</h3>
+
+                    <h1>4</h1>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-user-xmark"></i>
+
+                    <h3>On Leave</h3>
+
+                    <h1>3</h1>
+
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+
+            <div class="table-section">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Photo</th>
+                            <th>Employee ID</th>
+                            <th>Staff Name</th>
+                            <th>Department</th>
+                            <th>Shift</th>
+                            <th>Check-In</th>
+                            <th>Check-Out</th>
+                            <th>Working Hours</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                <img src="./bbbbbb.webp" class="staff-img">
+                            </td>
+
+                            <td>EMP001</td>
+
+                            <td>Akash</td>
+
+                            <td>Testing</td>
+
+                            <td>Morning</td>
+
+                            <td>09:00 AM</td>
+
+                            <td>06:00 PM</td>
+
+                            <td>08h 45m</td>
+
+                            <td>
+                                <span class="present">
+                                    Present
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                                <img src="./bbbbbb.webp" class="staff-img">
+                            </td>
+
+                            <td>EMP002</td>
+
+                            <td>Senthil</td>
+
+                            <td>Development</td>
+
+                            <td>General</td>
+
+                            <td>09:45 AM</td>
+
+                            <td>06:00 PM</td>
+
+                            <td>07h 50m</td>
+
+                            <td>
+                                <span class="late">
+                                    Late
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="action-buttons">
+
+                                    <button class="view-btn">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
